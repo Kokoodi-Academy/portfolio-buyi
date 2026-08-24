@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
-
+ 
 * {
   padding: 0;
   margin: 0;
 }
-
+ 
 .logo {
   font-family: "Dancing Script", cursive;
   font-weight: 400;
@@ -15,12 +15,12 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  padding: 20px 40px;
+  top: 0;
+  padding: 1rem 4rem;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .nav-link {
   color: white;
-  text-decoration: none;
-  font-size: 1rem;
 }
 .nav-link:hover {
   color: #71ca2b;
@@ -42,31 +42,27 @@
   width: 8rem;
 }
 .colored-btn {
-  background-color: #73ce2e;
+  background-color: #71ca2b;
   border: none;
 }
 .bordered-btn {
   border: 1px solid #ffffff;
   background-color: transparent;
 }
-.hero {
-  min-height: 100vh;
-}
-.hero-content {
+.flex-container {
   display: flex;
   gap: 2rem;
 }
-.hero-left {
+.centered-flex-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
+}
+.half-width {
   width: 50%;
 }
-.hero-right {
-  width: 50%;
-}
-.hero-image {
+.full-image {
   object-fit: cover;
   width: 100%;
 }
@@ -84,10 +80,10 @@
   font-size: 5rem;
   color: white;
 }
-.hero-subtitle {
+.subtitle {
   font-size: 2rem;
 }
-.subtitle {
+.note {
   font-size: 1.5rem;
   color: #5c555f;
 }
@@ -96,6 +92,44 @@
   gap: 1rem;
   padding: 0.5rem 0;
 }
+.even-section {
+  background-color: #071207;
+}
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.project-card{
+  width: 300px;
+  background-color: rgba(114, 203, 44, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.project-card img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: relative;
+}
+.project-card-content{
+  padding: 1rem;
+    display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-image {
+  width: 100px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(300px,1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
 nav {
   list-style: none;
   display: flex;
@@ -108,23 +142,18 @@ a {
 body {
   background-color: #000000;
   color: white;
-  padding: 2rem 4rem;
   font-family: "Roboto", sans-serif;
 }
 section {
-  margin: 2rem 0;
+  padding: 1rem 4rem;
+  min-height: 80vh;
 }
 
-a {
-  color: #00ff88; /* neon green */
+footer {
+  padding: 1rem 4rem;
+ display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-
-
-
-
-
- 
- 
 
 
