@@ -156,4 +156,14 @@ footer {
   justify-content: space-between;
 }
 
+a[href="#top"] {
+  position:static;
+  bottom: 20px;
+  right: 90px;
+  background-color: #71ca2b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
 
