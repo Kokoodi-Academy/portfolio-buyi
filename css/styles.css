@@ -5,6 +5,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+a, button, input, select, textarea, label {
+  cursor: inherit;
+}
  
 /* ID styles */
 #about {
@@ -35,10 +38,6 @@
 }
 .nav-link:hover {
   color: #71ca2b;
-}
-.nav-link:active {
-  color: #71ca2b;
-  border-bottom: 2px solid #71ca2b;
 }
 .hero-buttons {
   display: flex;
@@ -254,6 +253,49 @@
     width: 100%;
     align-items: center;
   }
+  .click-splash {
+  position: relative;
+}
+.click-splash::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.click-splash:active::after {
+  animation: liquid-splash 0.6s ease-out;
+}
+@keyframes liquid-splash {
+  0% {
+    opacity: 1;
+    box-shadow:
+      0 0 0 3px currentColor,
+      0 0 0 3px currentColor,
+      0 0 0 3px currentColor,
+      0 0 0 3px currentColor,
+      0 0 0 3px currentColor,
+      0 0 0 3px currentColor,
+      0 0 0 3px currentColor,
+      0 0 0 3px currentColor;
+  }
+  100% {
+    opacity: 0;
+    box-shadow:
+      40px -15px 0 -2px currentColor,
+      40px  10px 0 -2px currentColor,
+      30px  30px 0 -2px currentColor,
+      -6px  32px 0 -2px currentColor,
+      -26px 18px 0 -2px currentColor,
+      -30px -10px 0 -2px currentColor,
+      -18px -28px 0 -2px currentColor,
+       6px -32px 0 -2px currentColor;
+  }
+}
  
 /* Tag styles */
 nav {
@@ -271,13 +313,14 @@ body {
   color: white;
   width: 100%;
   font-family: "Roboto", sans-serif;
+cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="none" stroke="%2371ca2b" stroke-width="3"/><circle cx="14" cy="14" r="2" fill="%2371ca2b"/></svg>') 14 14, auto;
 }
 section {
   padding: 1.5rem 4rem;
   min-height: 80vh;
 }
 footer {
-  padding: 4rem;
+  padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #71ca2b;
