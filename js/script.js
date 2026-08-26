@@ -44,3 +44,11 @@ window.addEventListener('scroll', () => {
     backToTop.classList.remove('visible', 'bounce');
   }
 });
+
+const msgImage = document.querySelector('.msg-image');
+const msgObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle('in-view', entry.isIntersecting);
+  });
+}, { threshold: 0.5 });
+msgObserver.observe(msgImage);

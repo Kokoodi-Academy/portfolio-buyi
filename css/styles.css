@@ -87,7 +87,32 @@ a, button, input, select, textarea, label {
   width: 80%;
   object-fit: contain;
   margin:auto;
+  transform: rotate(-6deg);
 }
+@media (prefers-reduced-motion: no-preference) {
+  .msg-image.in-view {
+    animation: msg-shake 1.6s ease-in-out infinite;
+  }
+}
+@keyframes msg-shake {
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+  20% {
+    transform: rotate(-11deg);
+  }
+  40% {
+    transform: rotate(-1deg);
+  }
+  60% {
+    transform: rotate(-9deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+}
+
 .colored-text {
   color: #71ca2b;
 }
